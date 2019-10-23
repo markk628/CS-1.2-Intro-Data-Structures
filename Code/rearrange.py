@@ -15,6 +15,11 @@ def shuffle_list(word_list):
         word_list2.append(choice)
         word_list.remove(choice)
 
+def reverse_list(word_list):
+    reverse_list = word_list[::-1]
+    return reverse_list
+
+
 '''
 user enters the words that will go into the word_list array. The shuffle_list function will then
 return an array with shuffled words
@@ -26,3 +31,5 @@ if __name__ == "__main__":
 
     shuffle_list(word_list)
     print(word_list2)
+    reverse_list(word_list)
+    print(reverse_list(word_list))

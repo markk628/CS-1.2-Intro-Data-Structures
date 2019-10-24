@@ -30,6 +30,6 @@ if __name__ == "__main__":
         word_list.append(sys.argv[arg])
 
     shuffle_list(word_list)
-    print(word_list2)
+    print(' '.join(word_list2))
     reverse_list(word_list)
-    print(reverse_list(word_list))
+    print(' '.join(reverse_list(word_list)))

@@ -1,3 +1,4 @@
+#got help from my boy Ricky
 import sys
 import random
 

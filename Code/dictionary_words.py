@@ -1,3 +1,4 @@
+#got help from my boy Ricky
 from random import choice
 import sys
 

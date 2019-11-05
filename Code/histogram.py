@@ -1,17 +1,22 @@
 import re
+import sys
 
-source_text = 'olivertwist.txt'
+source_text = 'test.txt'
+
 
 def scrubbed_words(source_text):
+    
     with open(source_text, 'r') as file:
-        words = file.read()
-        #makes sure word is alphabetic
-        scrubbed_words = re.sub(r'[^a-zA-Z\s]', '', words)
-        return scrubbed_words.split()
+        words = file.read().split()
+
+    words_list = []
+    for word in words:
+        word = word.strip(".@;/").lower()
+        words_list.append(word)
+
+    return words_list
 
 def unique_words(histogram):
-    return len(histogram)
-
     # histogram = {}
     # #opens file stores data in words
     # words = scrubbed_words(source_text)
@@ -24,6 +29,8 @@ def unique_words(histogram):
     #     else:
     #         histogram[word] = 1
     # print(len(histogram))
+    return len(histogram)
+
 
 def list_histogram(source_text):
     words = scrubbed_words(source_text)
@@ -38,7 +45,7 @@ def list_histogram(source_text):
                 item_in_histogram = True
         if item_in_histogram == False:
             histogram.append([word, 1])
-    print(histogram)
+    #print(histogram)
     return histogram 
 
 def tuples_histogram(source_text):
@@ -54,7 +61,7 @@ def tuples_histogram(source_text):
                 item_in_histogram = True
         if item_in_histogram == False:
             histogram.append((word, 1))
-    print(histogram)
+    #print(histogram)
     return histogram
 
 def dic_histogram(source_text):
@@ -65,8 +72,9 @@ def dic_histogram(source_text):
             histogram[word] += 1
         else:
             histogram[word] = 1
-    for key in list(histogram.keys()):
-        print(key, histogram[key])
+    #for key in list(histogram.keys()):
+        #print(key, histogram[key])
+    return histogram
 
 
 

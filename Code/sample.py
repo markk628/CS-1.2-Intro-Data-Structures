@@ -34,9 +34,8 @@ def frequency(histogram, count):
 
     print(new_dict)
 
-
 word_list = read(source_text)
 print(random_word(word_list))
-hist = dic_histogram("test.txt")
-weights(hist)
-frequency(hist, 100)
+# hist = dic_histogram(source_text)
+# weights(hist)
+# frequency(hist, 100)

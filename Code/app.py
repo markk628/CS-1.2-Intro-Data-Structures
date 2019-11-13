@@ -18,5 +18,6 @@ def index():
         count += 1
     return new_list.join(words_list)
 
-
+if __name__ == "__main__":
+    app.run(debug=True)
     

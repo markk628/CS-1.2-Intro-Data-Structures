@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from histogram import dic_histogram
 from sample import read, random_word
 
@@ -12,12 +12,12 @@ def index():
     words_list = []
     new_list = ' '
     count = 0
-    while count < 7:
+    while count < 11:
         r_word  = random_word(word_list)
         words_list.append(r_word)
         count += 1
-    return new_list.join(words_list)
+    newer_list = new_list.join(words_list)
+    return render_template('index.html', newer_list=newer_list)
 
 if __name__ == "__main__":
     app.run(debug=True)
-    

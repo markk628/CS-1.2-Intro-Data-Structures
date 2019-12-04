@@ -98,7 +98,10 @@ class HashTable(object):
 
     def set(self, key, value):
         """Insert or update the given key with its associated value.
-        TODO: Running time: O(???) Why and under what conditions?"""
+        TODO: Running time: O(1) best case if the first node is the node
+        we are looking for. O(l) average case because number of nodes/number 
+        of buckets should give average time it would take to check each bucket 
+        (load factor)"""
         # TODO: Find bucket where given key belongs
         # TODO: Check if key-value entry exists in bucket
         # TODO: If found, update value associated with given key
@@ -112,7 +115,10 @@ class HashTable(object):
 
     def delete(self, key):
         """Delete the given key from this hash table, or raise KeyError.
-        TODO: Running time: O(???) Why and under what conditions?"""
+        TODO: Running time: O(1) best case if first node is the node
+        we are looking for. O(l) average case because number of nodes/number 
+        of buckets should give average time it would take to check each 
+        bucket (load factor)"""
         # TODO: Find bucket where given key belongs
         # TODO: Check if key-value entry exists in bucket
         # TODO: If found, delete entry associated with given key

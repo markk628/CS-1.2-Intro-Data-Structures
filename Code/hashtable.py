@@ -68,6 +68,7 @@ class HashTable(object):
             for key, value in bucket.items():
                 count += 1
         return count
+        
 
     def contains(self, key):
         """Return True if this hash table contains the given key, or False.
@@ -111,7 +112,6 @@ class HashTable(object):
         if node is not None:
             bucket.delete(node)
         bucket.append((key, value))
-
 
     def delete(self, key):
         """Delete the given key from this hash table, or raise KeyError.

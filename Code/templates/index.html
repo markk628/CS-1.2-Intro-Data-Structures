@@ -1,16 +1,27 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>tweet gen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tweet-Generator</title>
 </head>
+
 <body>
-    {{ newer_list }}
-    <form action="/">
-    <button type="submit">
-        Generate
-    </button>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-8 ">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display1" align="center">Tweet-Generator with Oliver Twist</h1>
+                    <h3 class="display-5" align="Center">{{ sentence }}</h3>
+                    <form action="/">
+                        <button type="submit" class="btn btn-light">
+                            Generate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
